@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0D0B0C" />
+  <title>Studio Fitness — Treinamento Personalizado em Alfenas-MG</title>
+  <meta name="description" content="Studio Fitness Treinamento Personalizado em Alfenas-MG. Nota 4.8 no Google com 46 avaliações. Agende sua aula experimental pelo WhatsApp." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 36'%3E%3Crect width='44' height='36' rx='6' fill='%230D0B0C'/%3E%3Cpolygon points='6,4 18,4 12,32 0,32' fill='%23E11D2E'/%3E%3Cpolygon points='24,4 38,4 32,32 18,32' fill='%23FFFFFF'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Fontes carregadas sem bloquear a renderização -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="studio.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       HERO
+       ===================================================================== -->
+  <div class="hero-stage stage-section" id="inicio">
+    <div class="hero-bg-photo" aria-hidden="true"></div>
+    <div class="hero-bg-vignette" aria-hidden="true"></div>
+    <canvas class="embers-canvas" id="heroEmbers" aria-hidden="true"></canvas>
+
+    <!-- BARRA SUPERIOR -->
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <!-- CONFIRMAR: número de WhatsApp antes de publicar -->
+          <a href="https://wa.me/553532926830" target="_blank" rel="noopener" class="topbar-item">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(35) 3292-6830</span>
+          </a>
+          <span class="topbar-sep" aria-hidden="true">|</span>
+          <span class="topbar-item topbar-address">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Av. Henrique Munhoz García, 327 - Jardim Boa Esperança, Alfenas - MG</span>
+          </span>
+        </div>
+        <!-- CONFIRMAR: horários -->
+        <span class="topbar-item topbar-hours">Seg–Sex 5h–12h · 15h–21h &nbsp;|&nbsp; Sáb 8h–11h</span>
+      </div>
+    </div>
+
+    <!-- NAVEGAÇÃO -->
+    <header class="navbar" id="mainHeader">
+      <div class="navbar-inner">
+        <a href="#inicio" class="brand-logo" aria-label="Studio Fitness — Página inicial">
+          <span class="brand-emblem" aria-hidden="true">
+            <svg viewBox="0 0 44 36" width="38" height="31" fill="none">
+              <polygon points="6,4 18,4 12,32 0,32" fill="#E11D2E"/>
+              <polygon points="24,4 38,4 32,32 18,32" fill="#FFFFFF"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-word">STUDIO</span>
+            <span class="brand-cm">FITNESS</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Menu principal">
+          <a href="#inicio" class="nav-link active">INÍCIO</a>
+          <a href="#atendimento" class="nav-link">ATENDIMENTO</a>
+          <a href="#horarios" class="nav-link">HORÁRIOS</a>
+          <a href="#planos" class="nav-link">PLANOS</a>
+          <a href="#avaliacoes" class="nav-link">AVALIAÇÕES</a>
+          <a href="#contato" class="nav-link">CONTATO</a>
+        </nav>
+
+        <div class="navbar-actions">
+          <a href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20no%20STUDIO%20FITNESS." target="_blank" rel="noopener" class="navbar-join-btn"><span class="hide-sm">AGENDAR AULA EXPERIMENTAL</span><span class="show-sm">AGENDAR</span></a>
+          <button class="navbar-drawer-trigger" id="drawerOpenBtn" type="button" aria-label="Abrir menu" aria-controls="sideDrawer" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- PALCO DO HERO -->
+    <div class="hero-content">
+      <div class="hero-slanted-bars" aria-hidden="true">
+        <span class="bar-slash bar-slash-1"></span>
+        <span class="bar-slash bar-slash-2"></span>
+      </div>
+      <div class="hero-deco-x hero-deco-x-top" aria-hidden="true"><span>✕</span><span>✕</span></div>
+      <div class="hero-deco-x hero-deco-x-bottom" aria-hidden="true"><span>✕</span></div>
+      <div class="hero-dot-matrix" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero-typography-layer">
+        <h1 class="hero-heading">
+          <span class="hero-line-top">SEU</span>
+          <span class="hero-line-center">TREINO</span>
+          <span class="hero-line-bottom">SOB MEDIDA</span>
+        </h1>
+      </div>
+
+      <!-- PLACEHOLDER: foto ilustrativa do template. Trocar por foto real do Studio Fitness. -->
+      <div class="hero-athlete-wrap">
+        <img src="assets/images/hero-athlete-cutout.png" onerror="this.onerror=null;this.src='assets/images/hero-athlete.png';" alt="" class="hero-athlete-img" />
+      </div>
+
+      <!-- Bloco de informação e chamadas -->
+      <div class="hero-info">
+        <a class="rating-pill" href="#avaliacoes">
+          <span class="rating-stars" aria-hidden="true">★★★★★</span>
+          <strong>4.8</strong>
+          <span>· 46 avaliações no Google</span>
+        </a>
+        <p class="hero-sub">Treinamento personalizado em Alfenas, com avaliação, orientação e acompanhamento do primeiro ao último exercício.</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20no%20STUDIO%20FITNESS." target="_blank" rel="noopener" class="btn-bracket btn-bracket-orange-solid">
+            <span>AGENDAR AULA EXPERIMENTAL</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#horarios" class="btn-bracket">
+            <span>VER HORÁRIOS</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       ATENDIMENTO PERSONALIZADO (3 cards clicáveis)
+       ===================================================================== -->
+  <section class="programs-strip" id="atendimento" aria-label="Atendimento personalizado">
+    <div class="programs-grid">
+      <a class="program-card card-link reveal" href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20inicial%20do%20STUDIO%20FITNESS." target="_blank" rel="noopener">
+        <!-- PLACEHOLDER: imagem ilustrativa -->
+        <img src="assets/images/card-01.png" alt="" class="program-card-bg" loading="lazy" />
+        <div class="program-card-overlay"></div>
+        <div class="program-card-content">
+          <span class="triple-slashes" aria-hidden="true">///</span>
+          <h2 class="program-card-title">AVALIAÇÃO<br />INICIAL</h2>
+          <p class="program-card-text">Conhecemos sua rotina, seu histórico e seu objetivo antes de montar o treino.</p>
+          <span class="program-card-cta">FALAR NO WHATSAPP <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="program-card-num" aria-hidden="true">01</span>
+        </div>
+      </a>
+      <a class="program-card card-link reveal" href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20treino%20sob%20medida%20do%20STUDIO%20FITNESS." target="_blank" rel="noopener">
+        <img src="assets/images/card-02.png" alt="" class="program-card-bg" loading="lazy" />
+        <div class="program-card-overlay"></div>
+        <div class="program-card-content">
+          <span class="triple-slashes" aria-hidden="true">///</span>
+          <h2 class="program-card-title">TREINO<br />SOB MEDIDA</h2>
+          <p class="program-card-text">Exercícios, cargas e ritmo pensados para você, não para uma ficha genérica.</p>
+          <span class="program-card-cta">FALAR NO WHATSAPP <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="program-card-num" aria-hidden="true">02</span>
+        </div>
+      </a>
+      <a class="program-card card-link reveal" href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20acompanhamento%20do%20STUDIO%20FITNESS." target="_blank" rel="noopener">
+        <img src="assets/images/card-03.png" alt="" class="program-card-bg" loading="lazy" />
+        <div class="program-card-overlay"></div>
+        <div class="program-card-content">
+          <span class="triple-slashes" aria-hidden="true">///</span>
+          <h2 class="program-card-title">ACOMPANHAMENTO<br />CONTÍNUO</h2>
+          <p class="program-card-text">Orientação em cada sessão e ajustes conforme a sua evolução.</p>
+          <span class="program-card-cta">FALAR NO WHATSAPP <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="program-card-num" aria-hidden="true">03</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SOBRE + FAIXAS
+       ===================================================================== -->
+  <section class="about-stage stage-section" id="sobre">
+    <div class="about-smoke-glow" aria-hidden="true"></div>
+    <canvas class="embers-canvas" id="aboutEmbers" aria-hidden="true"></canvas>
+
+    <div class="about-container">
+      <div class="about-copy reveal">
+        <div class="section-heading-wrap align-left">
+          <span class="watermark-stroke" aria-hidden="true">SOBRE</span>
+          <h2 class="section-title">TREINO COM<br />ATENÇÃO DE<br />VERDADE</h2>
+        </div>
+        <p class="about-description">
+          O <strong>Studio Fitness Treinamento Personalizado</strong> é um estúdio em Alfenas para quem quer treinar com orientação de perto. Em vez de uma academia lotada, você tem um espaço focado no seu treino, com acompanhamento em cada etapa.
+        </p>
+        <a href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20no%20STUDIO%20FITNESS." target="_blank" rel="noopener" class="btn-bracket">
+          <span>AGENDAR AULA EXPERIMENTAL</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="about-visual-cluster">
+        <!-- PLACEHOLDER: foto ilustrativa do template -->
+        <div class="about-athlete-wrap">
+          <img src="assets/images/about-athlete-cutout.png" onerror="this.onerror=null;this.src='assets/images/about-athlete.png';" alt="" class="about-athlete-img" loading="lazy" />
+        </div>
+        <div class="about-stats-stack">
+          <div class="stat-badge">
+            <div class="stat-badge-meta"><span class="triple-slashes" aria-hidden="true">///</span><span class="stat-label">NOTA NO GOOGLE</span></div>
+            <div class="stat-number">4.8<span class="stat-plus">★</span></div>
+          </div>
+          <div class="stat-badge">
+            <div class="stat-badge-meta"><span class="triple-slashes" aria-hidden="true">///</span><span class="stat-label">AVALIAÇÕES</span></div>
+            <div class="stat-number">46</div>
+          </div>
+          <div class="stat-badge">
+            <div class="stat-badge-meta"><span class="triple-slashes" aria-hidden="true">///</span><span class="stat-label">ABRE DE SEG A SEX</span></div>
+            <div class="stat-number">5H</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ribbons-crossover" aria-hidden="true">
+      <div class="ribbon ribbon-dark">
+        <div class="ribbon-track ribbon-track-reverse">
+          <div class="ribbon-group">
+            <span>TREINO PERSONALIZADO</span><i class="star-4pt"></i><span>AVALIAÇÃO INICIAL</span><i class="star-4pt"></i><span>ORIENTAÇÃO</span><i class="star-4pt"></i><span>ACOMPANHAMENTO</span><i class="star-4pt"></i><span>ALFENAS-MG</span><i class="star-4pt"></i>
+          </div>
+          <div class="ribbon-group">
+            <span>TREINO PERSONALIZADO</span><i class="star-4pt"></i><span>AVALIAÇÃO INICIAL</span><i class="star-4pt"></i><span>ORIENTAÇÃO</span><i class="star-4pt"></i><span>ACOMPANHAMENTO</span><i class="star-4pt"></i><span>ALFENAS-MG</span><i class="star-4pt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="ribbon ribbon-orange">
+        <div class="ribbon-track">
+          <div class="ribbon-group">
+            <span>SOB MEDIDA</span><i class="star-4pt-outline"></i><span>STUDIO FITNESS</span><i class="star-4pt-outline"></i><span>AULA EXPERIMENTAL</span><i class="star-4pt-outline"></i><span>4.8 NO GOOGLE</span><i class="star-4pt-outline"></i><span>TREINO COM FOCO</span><i class="star-4pt-outline"></i>
+          </div>
+          <div class="ribbon-group">
+            <span>SOB MEDIDA</span><i class="star-4pt-outline"></i><span>STUDIO FITNESS</span><i class="star-4pt-outline"></i><span>AULA EXPERIMENTAL</span><i class="star-4pt-outline"></i><span>4.8 NO GOOGLE</span><i class="star-4pt-outline"></i><span>TREINO COM FOCO</span><i class="star-4pt-outline"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       HORÁRIOS (CONFIRMAR antes de publicar)
+       ===================================================================== -->
+  <section class="features-stage stage-section" id="horarios">
+    <div class="features-header">
+      <div class="section-heading-wrap align-center">
+        <span class="watermark-stroke" aria-hidden="true">HORÁRIOS</span>
+        <h2 class="section-title">QUANDO VOCÊ PODE TREINAR</h2>
+      </div>
+    </div>
+
+    <div class="features-split">
+      <div class="features-video-panel">
+        <!-- PLACEHOLDER: imagem ilustrativa -->
+        <img src="assets/images/why-choose-video.png" alt="" class="features-video-img" loading="lazy" />
+        <div class="features-video-gradient" aria-hidden="true"></div>
+        <a href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio%20no%20STUDIO%20FITNESS." target="_blank" rel="noopener" class="play-circle-btn" aria-label="Agendar horário pelo WhatsApp">
+          <span class="play-circle-ring" aria-hidden="true"></span>
+          <span class="play-circle-core">Agendar</span>
+        </a>
+        <p class="hours-note"><span class="triple-slashes" aria-hidden="true">///</span> Confirme feriados pelo WhatsApp</p>
+      </div>
+
+      <div class="features-checkerboard">
+        <article class="feature-tile tile-orange reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 56 56" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="28" cy="30" r="14"/><path d="M28 22v8l6 4"/><path d="M14 14l-4 4M42 14l4 4"/></svg>
+          </div>
+          <h3 class="feature-tile-title">SEGUNDA A SEXTA<br />MANHÃ</h3>
+          <p class="hours-big">05h <span>às</span> 12h</p>
+        </article>
+        <article class="feature-tile tile-dark reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 56 56" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M40 34a14 14 0 1 1-16-20 11 11 0 0 0 16 20z"/></svg>
+          </div>
+          <h3 class="feature-tile-title">SEGUNDA A SEXTA<br />TARDE E NOITE</h3>
+          <p class="hours-big">15h <span>às</span> 21h</p>
+        </article>
+        <article class="feature-tile tile-dark reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 56 56" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="10" y="14" width="36" height="32" rx="2"/><path d="M10 24h36M20 10v8M36 10v8"/><path d="M20 34h6v6h-6z"/></svg>
+          </div>
+          <h3 class="feature-tile-title">SÁBADO</h3>
+          <p class="hours-big">08h <span>às</span> 11h</p>
+        </article>
+        <article class="feature-tile tile-orange reveal">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 56 56" width="52" height="52" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40l4-10a16 16 0 1 1 6 6z"/><path d="M22 24h12M22 30h8"/></svg>
+          </div>
+          <h3 class="feature-tile-title">DOMINGOS E<br />FERIADOS</h3>
+          <p class="feature-tile-text">Consulte a disponibilidade direto pelo WhatsApp antes de ir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       COMO FUNCIONA
+       ===================================================================== -->
+  <section class="steps-stage" id="como-funciona">
+    <div class="steps-inner">
+      <div class="section-heading-wrap align-center">
+        <span class="watermark-stroke" aria-hidden="true">PASSOS</span>
+        <h2 class="section-title">COMO FUNCIONA SUA AULA EXPERIMENTAL</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card reveal">
+          <span class="step-num">01</span>
+          <h3>CHAME NO WHATSAPP</h3>
+          <p>Escolha o melhor dia e horário para a sua aula experimental.</p>
+        </article>
+        <article class="step-card reveal">
+          <span class="step-num">02</span>
+          <h3>CONHEÇA O ESPAÇO</h3>
+          <p>Visite o estúdio, tire suas dúvidas e conte qual é o seu objetivo.</p>
+        </article>
+        <article class="step-card reveal">
+          <span class="step-num">03</span>
+          <h3>TREINE COM ORIENTAÇÃO</h3>
+          <p>Faça o treino na prática antes de decidir qual plano faz sentido para você.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PLANOS (PLACEHOLDERS: valores e itens a confirmar)
+       ===================================================================== -->
+  <section class="pricing-stage stage-section" id="planos">
+    <div class="pricing-inner">
+      <div class="pricing-top">
+        <div class="section-heading-wrap align-center">
+          <span class="watermark-stroke" aria-hidden="true">PLANOS</span>
+          <h2 class="section-title">ESCOLHA SEU PLANO</h2>
+        </div>
+        <p class="pricing-sub">Valores e condições passados direto pela equipe. Toque no plano para pedir os detalhes.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <a class="plan-card card-link reveal" href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20Plano%201%20do%20STUDIO%20FITNESS." target="_blank" rel="noopener">
+          <div class="plan-card-head">
+            <span class="triple-slashes" aria-hidden="true">///</span>
+            <span class="plan-tag">A CONFIRMAR</span>
+            <h3 class="plan-name">PLANO 1</h3>
+          </div>
+          <div class="plan-price-wrap"><span class="placeholder-chip">VALOR A CONFIRMAR</span></div>
+          <ul class="plan-features">
+            <li>A CONFIRMAR</li><li>A CONFIRMAR</li><li>A CONFIRMAR</li>
+          </ul>
+          <span class="btn-bracket plan-cta"><span>PEDIR DETALHES</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="plan-watermark-num" aria-hidden="true">01</span>
+        </a>
+
+        <a class="plan-card plan-card-featured card-link reveal" href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20Plano%202%20do%20STUDIO%20FITNESS." target="_blank" rel="noopener">
+          <div class="plan-badge-popular">DESTAQUE</div>
+          <div class="plan-card-head">
+            <span class="triple-slashes triple-slashes-white" aria-hidden="true">///</span>
+            <span class="plan-tag">A CONFIRMAR</span>
+            <h3 class="plan-name">PLANO 2</h3>
+          </div>
+          <div class="plan-price-wrap"><span class="placeholder-chip placeholder-chip-light">VALOR A CONFIRMAR</span></div>
+          <ul class="plan-features">
+            <li>A CONFIRMAR</li><li>A CONFIRMAR</li><li>A CONFIRMAR</li>
+          </ul>
+          <span class="btn-bracket btn-bracket-dark plan-cta"><span>PEDIR DETALHES</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="plan-watermark-num" aria-hidden="true">02</span>
+        </a>
+
+        <a class="plan-card card-link reveal" href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20Plano%203%20do%20STUDIO%20FITNESS." target="_blank" rel="noopener">
+          <div class="plan-card-head">
+            <span class="triple-slashes" aria-hidden="true">///</span>
+            <span class="plan-tag">A CONFIRMAR</span>
+            <h3 class="plan-name">PLANO 3</h3>
+          </div>
+          <div class="plan-price-wrap"><span class="placeholder-chip">VALOR A CONFIRMAR</span></div>
+          <ul class="plan-features">
+            <li>A CONFIRMAR</li><li>A CONFIRMAR</li><li>A CONFIRMAR</li>
+          </ul>
+          <span class="btn-bracket plan-cta"><span>PEDIR DETALHES</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          <span class="plan-watermark-num" aria-hidden="true">03</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       AVALIAÇÕES (PLACEHOLDERS: colar avaliações reais do Google)
+       ===================================================================== -->
+  <section class="reviews-stage" id="avaliacoes">
+    <div class="reviews-inner">
+      <div class="reviews-score reveal">
+        <span class="triple-slashes" aria-hidden="true">///</span>
+        <strong class="reviews-number">4.8</strong>
+        <span class="reviews-stars" aria-hidden="true">★★★★★</span>
+        <p>Média de <strong>46 avaliações</strong> no Google</p>
+        <a class="btn-bracket" href="https://www.google.com/search?q=STUDIO+FITNESS+Treinamento+Personalizado+Alfenas" target="_blank" rel="noopener">
+          <span>VER TODAS NO GOOGLE</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+      <div class="reviews-list">
+        <!-- PLACEHOLDER: substituir por avaliações reais (texto, nome, data). Não inventar. -->
+        <article class="review-card reveal">
+          <span class="review-quote" aria-hidden="true">“</span>
+          <span class="reviews-stars small" aria-label="5 estrelas">★★★★★</span>
+          <p class="review-text">Avaliação real do Google — A CONFIRMAR</p>
+          <span class="review-author">Nome do aluno · A CONFIRMAR</span>
+        </article>
+        <article class="review-card reveal">
+          <span class="review-quote" aria-hidden="true">“</span>
+          <span class="reviews-stars small" aria-label="5 estrelas">★★★★★</span>
+          <p class="review-text">Avaliação real do Google — A CONFIRMAR</p>
+          <span class="review-author">Nome do aluno · A CONFIRMAR</span>
+        </article>
+        <article class="review-card reveal">
+          <span class="review-quote" aria-hidden="true">“</span>
+          <span class="reviews-stars small" aria-label="5 estrelas">★★★★★</span>
+          <p class="review-text">Avaliação real do Google — A CONFIRMAR</p>
+          <span class="review-author">Nome do aluno · A CONFIRMAR</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       LOCALIZAÇÃO + FORMULÁRIO + RODAPÉ
+       ===================================================================== -->
+  <section class="contact-footer-stage" id="contato">
+    <div class="contact-grid-wrap">
+      <!-- Localização -->
+      <div class="location-panel reveal" id="localizacao">
+        <div class="section-heading-wrap align-left">
+          <span class="watermark-stroke" aria-hidden="true">LOCAL</span>
+          <h2 class="section-title">ONDE ESTAMOS</h2>
+        </div>
+        <p class="panel-subtitle">
+          <strong>Av. Henrique Munhoz García, 327</strong><br />
+          Jardim Boa Esperança · Alfenas - MG · 37135-152
+        </p>
+        <div class="map-frame">
+          <div class="map-fallback" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Jardim Boa Esperança · Alfenas</span>
+          </div>
+          <iframe title="Mapa do Studio Fitness em Alfenas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Henrique+Munhoz+Garc%C3%ADa,+327+-+Jardim+Boa+Esperan%C3%A7a,+Alfenas+-+MG,+37135-152&amp;output=embed"></iframe>
+        </div>
+        <div class="location-actions">
+          <a class="btn-bracket btn-bracket-orange-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+Henrique+Munhoz+Garc%C3%ADa,+327,+Alfenas+-+MG,+37135-152" target="_blank" rel="noopener">
+            <span>COMO CHEGAR</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn-bracket" href="https://waze.com/ul?q=Av.%20Henrique%20Munhoz%20Garc%C3%ADa%2C%20327%2C%20Alfenas&amp;navigate=yes" target="_blank" rel="noopener"><span>ABRIR NO WAZE</span></a>
+        </div>
+      </div>
+
+      <!-- Formulário -->
+      <div class="enroll-panel reveal">
+        <span class="triple-slashes" aria-hidden="true">///</span>
+        <h3 class="enroll-title">AGENDE SUA AULA EXPERIMENTAL</h3>
+        <p class="panel-subtitle">Preencha os dados e a conversa abre direto no WhatsApp do estúdio.</p>
+
+        <form class="enroll-form" id="leadForm">
+          <label class="field-group">
+            <span>NOME</span>
+            <input type="text" id="leadName" autocomplete="name" placeholder="Seu nome" required />
+          </label>
+          <label class="field-group">
+            <span>WHATSAPP</span>
+            <input type="tel" id="leadPhone" autocomplete="tel" inputmode="tel" placeholder="(35) 99999-9999" required />
+          </label>
+          <label class="field-group">
+            <span>HORÁRIO PREFERIDO</span>
+            <!-- CONFIRMAR: horários disponíveis -->
+            <select id="leadTime" required>
+              <optgroup label="Seg a Sex · Manhã">
+                <option>05h</option><option>06h</option><option selected>07h</option><option>08h</option><option>09h</option><option>10h</option><option>11h</option>
+              </optgroup>
+              <optgroup label="Seg a Sex · Tarde e noite">
+                <option>15h</option><option>16h</option><option>17h</option><option>18h</option><option>19h</option><option>20h</option>
+              </optgroup>
+              <optgroup label="Sábado">
+                <option value="08h (sábado)">08h</option><option value="09h (sábado)">09h</option><option value="10h (sábado)">10h</option>
+              </optgroup>
+            </select>
+          </label>
+          <button type="submit" class="btn-bracket btn-bracket-orange-solid">
+            <span>ENVIAR PELO WHATSAPP</span>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-hint">Não salvamos seus dados: a mensagem é montada no seu próprio WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Chamada final -->
+    <div class="final-cta reveal">
+      <span class="triple-slashes" aria-hidden="true">///</span>
+      <h2 class="final-cta-title">PRONTO PARA COMEÇAR?</h2>
+      <p>Fale com a equipe e marque o melhor horário para a sua aula experimental.</p>
+      <a href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20no%20STUDIO%20FITNESS." target="_blank" rel="noopener" class="btn-bracket btn-bracket-orange-solid">
+        <span>CHAMAR NO WHATSAPP</span>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
+          <a href="#inicio" class="brand-logo" aria-label="Studio Fitness">
+            <span class="brand-emblem" aria-hidden="true">
+              <svg viewBox="0 0 44 36" width="34" height="28" fill="none"><polygon points="6,4 18,4 12,32 0,32" fill="#E11D2E"/><polygon points="24,4 38,4 32,32 18,32" fill="#FFFFFF"/></svg>
+            </span>
+            <span class="brand-text"><span class="brand-word">STUDIO</span><span class="brand-cm">FITNESS</span></span>
+          </a>
+          <p class="footer-desc">Treinamento personalizado em Alfenas-MG, com avaliação, orientação e acompanhamento.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>NAVEGAÇÃO</h4>
+          <ul>
+            <li><a href="#atendimento">Atendimento</a></li>
+            <li><a href="#horarios">Horários</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>HORÁRIOS</h4>
+          <ul>
+            <li>Seg a Sex · 05h–12h</li>
+            <li>Seg a Sex · 15h–21h</li>
+            <li>Sábado · 08h–11h</li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>CONTATO</h4>
+          <ul>
+            <li>Av. Henrique Munhoz García, 327<br />Jardim Boa Esperança, Alfenas - MG</li>
+            <li><a href="https://wa.me/553532926830" target="_blank" rel="noopener">WhatsApp (35) 3292-6830</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="ano">2026</span> <strong>Studio Fitness Treinamento Personalizado</strong>. Todos os direitos reservados.</span>
+        <span>Alfenas · Minas Gerais</span>
+      </div>
+    </footer>
+  </section>
+
+  <!-- =====================================================================
+       MENU LATERAL (MOBILE)
+       ===================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="side-drawer" id="sideDrawer" aria-hidden="true" aria-label="Menu">
+    <div class="drawer-top">
+      <a href="#inicio" class="brand-logo drawer-close-link">
+        <span class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 44 36" width="32" height="26" fill="none"><polygon points="6,4 18,4 12,32 0,32" fill="#E11D2E"/><polygon points="24,4 38,4 32,32 18,32" fill="#FFFFFF"/></svg>
+        </span>
+        <span class="brand-text"><span class="brand-word">STUDIO</span><span class="brand-cm">FITNESS</span></span>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav class="drawer-nav" aria-label="Menu móvel">
+      <a href="#inicio" class="drawer-link">INÍCIO</a>
+      <a href="#atendimento" class="drawer-link">ATENDIMENTO</a>
+      <a href="#horarios" class="drawer-link">HORÁRIOS</a>
+      <a href="#como-funciona" class="drawer-link">COMO FUNCIONA</a>
+      <a href="#planos" class="drawer-link">PLANOS</a>
+      <a href="#avaliacoes" class="drawer-link">AVALIAÇÕES</a>
+      <a href="#contato" class="drawer-link">LOCALIZAÇÃO E CONTATO</a>
+    </nav>
+    <div class="drawer-info">
+      <span class="triple-slashes" aria-hidden="true">///</span>
+      <h4>STUDIO FITNESS · ALFENAS</h4>
+      <p>Av. Henrique Munhoz García, 327 - Jardim Boa Esperança</p>
+      <p><strong>(35) 3292-6830</strong></p>
+      <a href="https://wa.me/553532926830?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20no%20STUDIO%20FITNESS." target="_blank" rel="noopener" class="btn-bracket drawer-cta">
+        <span>AGENDAR AULA</span>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- SELO FIXO DE PRÉVIA (F9 Coding) -->
+  <div class="f9-watermark" role="note" aria-label="Prévia criada por F9 Coding">
+    <span class="f9-logo" aria-hidden="true">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="f9bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f7a55"/><stop offset="1" stop-color="#0a2e21"/></linearGradient>
+          <linearGradient id="f9glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2fff3"/><stop offset="1" stop-color="#7cf0c2"/></linearGradient>
+        </defs>
+        <rect width="32" height="32" rx="8" fill="url(#f9bg)"/>
+        <path d="M11 25V8h12v3.5h-8v4h6.5V19H15v6z" fill="url(#f9glass)" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <span>Prévia criada por F9 Coding · uso não autorizado</span>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
